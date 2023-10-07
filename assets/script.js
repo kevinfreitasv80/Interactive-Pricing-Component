@@ -1,0 +1,1 @@
+const strong = document.getElementById("strong");
