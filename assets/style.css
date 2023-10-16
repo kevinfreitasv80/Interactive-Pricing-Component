@@ -2,31 +2,182 @@
 
 :root{
     --VeryPaleBlue: hsl(230, 100%, 99%);
-    --DarkDesaturatedBlue: hsl(227, 35%, 25%);
+    --DarkDesaturatedBlue: hsl(227, 35%, 25%)
 }
-html, body, h1, p{
+html, body, h1{
     margin: 0;
 }
-html, body{
-    padding: 0;
+html, body, button{
     font-family: "Manrope";
+}
+html, body{
+    
+    padding: 0;
+    color: hsl(223, 11%, 55%);
 }
 main{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--VeryPaleBlue);
 }
-h1{
-
+main h1, .descr{
+    text-align: center;
+}
+h1, strong{
+    color: var(--DarkDesaturatedBlue);
 }
 strong{
     font-size: 2.5em;
+    margin-right: .1em;
 }
 strong::before{
     content: "$";
 }
 button{
     background: var(--DarkDesaturatedBlue);
+}
+ul{
+    padding: 0;
+    line-height: 2em;
+}
+li{
+    list-style-image: url(../images/icon-check.svg);
+}
+button{
+    display: inline-block;
+    padding: .8em 3.5em;
+    color: #ADB8E2;
+    border: none;
+    cursor: pointer;
+    border-radius: 2em;
+}
+button:hover{
+    color: white;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + .checkModern div{
+    transform: translate(140%, 20%);
+}
+input[type="checkbox"]:checked + .checkModern{
+    background: #0BDBC3;
+}
+
+.checkModern:hover{
+    background: #7BE9DF;
+}
+.checkModern, .checkModern div{
+    transition: .4s;
+}
+.checkModern{
+    cursor: pointer;
+    border-radius: 2em;
+    width: 2.7em;
+    height: 1.44em;
+    background: #CFD8EE;
+}
+.checkModern div{
+    background: white;
+    width: 1em;
+    height: 1em;
+    transform: translate(20%, 20%);
+    border-radius: 50%;
+}
+.colorBg{
+    display: block;
+    background: #F1F5FE;
+    height: 50vh;
+    width: 100vw;
+    border-end-start-radius: 10em;
+}
+.items{
+    background: var(--VeryPaleBlue);
+}
+.textTop{
+    position: relative;
+    margin-bottom: 5em;
+}
+.textTop h1{
+    font-size: 2em;
+}
+.patternCircles{
+    z-index: -1;
+    position: absolute;
+    top: -2.5em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.infor, .pageviewsPrice, .price, .monYear{
+    display: flex;
+    align-items: center;
+}
+.discount{
+    font-size: .8em;
+    padding: .2em .5em;
+    border-radius: 2em;
+    background: hsl(11, 68%, 95%);
+    color: hsl(15, 100%, 70%);
+}
+.monYear{
+    font-size: .85em;
+    justify-content: center;
+}
+.monYear p, .monYear label{
+    margin-right: .7em;
+}
+.pageviewsPrice, .infor{
+    justify-content: space-between;
+}
+.pageviewsPrice, .range{
+    width: 100%;
+}
+.pageviewsPrice{
+    margin-bottom: 1em;
+}
+.pageviews{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+.monYear{
+    margin-bottom: 1em;
+}
+.range {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    height: 0.625em;
+    border-radius: 1em;
+    background-color: #EBF2FB;
+    outline: none;
+    margin-bottom: 3em;
+}
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    border: none;
+    width: 2.7em;
+    height: 2.7em;
+    border-radius: 50%;
+    background: url(../images/icon-slider.svg) #0BDBC3 no-repeat .5em;
+    box-shadow: 0 .5em 3em #0BDBC3;
+    transition: .4s;
+}
+.range::-webkit-slider-thumb:hover{
+    cursor: pointer;
+    background: url(../images/icon-slider.svg) #79EBDC no-repeat .5em;
+}
+.range::-webkit-slider-thumb:active{
+    cursor: grabbing;
+    background: url(../images/icon-slider.svg) #26AAA3 no-repeat .5em;
+}
+#spanPageviews::after{
+    content: "k";
+}
+.items{
+    padding: 4em;
+    width: 25em;
+    border-radius: .5em;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.164);
 }

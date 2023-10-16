@@ -2,33 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="./assets/style.css">
     <script defer src="./assets/script.js"></script>
     <title>Frontend Mentor | Interactive pricing component</title>
   </head>
   <body>
+    <span class="colorBg"></span>
     <main>
-      <h1>Simple, traffic-based pricing</h1>
-      <p>Sign-up for our 30-day trial. No credit card required.</p>
-      <section>
+      <article class="textTop">
+        <img class="patternCircles" src="./images/pattern-circles.svg" alt="">
+        <h1>Simple, traffic-based pricing</h1>
+        <p class="descr">Sign-up for our 30-day trial. No credit card required.</p>
+      </article>
+      <section class="items">
         <section>
-          <section>
-            <article>
-              Pageviews
-            </article>
-            <article><p><strong id="strong">16.00</strong> /month</p></article>
-          </section>
+          <article class="pageviewsPrice">
+            <p class="pageviews"><span id="spanPageviews">100</span> Pageviews</p>
+            <p class="price"><strong id="strong">16.00</strong> /month</p>
+          </article>
+          <input class="range" type="range" value="2" min="1" max="3">
         </section>
-        <article>
+        <article class="monYear">
           <p>Monthly Billing</p>
-          <input type="checkbox">
+          <input id="check" type="checkbox">
+          <label for="check" class="checkModern">
+            <div></div>
+          </label>
           <p>Yearly Billing</p>
-          <span>25% discount</span>
+          <span class="discount">25% discount</span>
         </article>
-        <article>
+        <article class="infor">
           <ul>
             <li>Unlimited websites</li>
             <li>100% data ownership</li>
