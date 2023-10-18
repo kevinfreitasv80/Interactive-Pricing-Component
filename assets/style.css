@@ -225,4 +225,7 @@ hr{
     .items{
         width: 15em;
     }
+    input[type="checkbox"]:checked + .checkModern div{
+        transform: translate(100%, 20%);
+    }
 }
