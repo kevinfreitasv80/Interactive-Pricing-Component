@@ -181,3 +181,48 @@ input[type="checkbox"]:checked + .checkModern{
     border-radius: .5em;
     box-shadow: 0 1em 2em rgba(0, 0, 0, 0.164);
 }
+hr{
+    height: 1px;
+    background: #D0D8EF;
+    border: none;
+}
+
+@media (max-width: 545px){
+    .items{
+        padding: 2em 2.5em;
+    }
+}
+@media (min-width: 505px){
+    hr{
+        display: none;
+    }
+}
+@media (max-width: 505px){
+    .items{
+        width: 25em;
+        padding: 1em;
+    }
+    .infor{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .pageviewsPrice{
+        flex-direction: column;
+    }
+}
+@media (max-width: 450px){
+    .items{
+        width: 20em;
+    }
+}
+@media (max-width: 370px){
+    .items{
+        width: 17em;
+    }
+}
+@media (max-width: 330px){
+    .items{
+        width: 15em;
+    }
+}
